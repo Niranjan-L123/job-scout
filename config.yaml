@@ -167,27 +167,21 @@ sources:
     companies:
       - cloudflare
       - monzo
-      - deliveroo
       - skyscanner
       - databricks
       - wayve
-      - checkout
-      - starlingbank
-      - octopusenergy
-      - darktrace
-      - snyk
-      - trailofbits
+      - graphcore
 
   lever:
     enabled: true
     companies:
       - palantir
+      - sophos
 
   ashby:
     enabled: true
     companies:
       - elevenlabs
-      - wise
       - quantexa
 
   workable:
@@ -200,10 +194,6 @@ sources:
     boards:
       # host / tenant / site as they appear in the careers URL:
       # https://<tenant>.wdN.myworkdayjobs.com/<site>
-      - host: arm.wd3.myworkdayjobs.com
-        tenant: arm
-        site: External
-        search: ""
       - host: rollsroyce.wd3.myworkdayjobs.com
         tenant: rollsroyce
         site: professional
@@ -235,7 +225,10 @@ sources:
     search_urls:
       - https://www.gradcracker.com/search/computing-technology/engineering-work-placements-internships
 
+  # Disabled: ratemyplacement.co.uk renders job listings client-side with
+  # JavaScript, so plain HTML scraping returns nothing. Gradcracker + Adzuna
+  # cover the same UK placement market.
   ratemyplacement:
-    enabled: true
+    enabled: false
     search_urls:
       - "https://www.ratemyplacement.co.uk/search-jobs?show=jobs&industry=it-technology"

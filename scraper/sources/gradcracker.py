@@ -1,7 +1,8 @@
-"""Best-effort scraper for gradcracker.com placement search pages.
+"""Scraper for gradcracker.com placement/internship search pages.
 
-Gradcracker has no public API and may serve 403 to non-browser clients.
-Failures are logged and skipped so the rest of the run continues.
+Job links look like:
+  /hub/<hubid>/<company-slug>/work-placement-internship/<jobid>/<title-slug>
+Promotional webinar entries use the same pattern and are skipped.
 """
 import re
 from urllib.parse import urljoin
@@ -12,7 +13,10 @@ from .. import log
 from ..http import get_html
 from ..models import Job
 
-JOB_HREF = re.compile(r"/hubs/\d+", re.I)
+JOB_HREF = re.compile(
+    r"/hub/\d+/([^/]+)/(?:work-placement-internship|graduate-job)/\d+/([^/?#]+)",
+    re.I,
+)
 
 
 def fetch(cfg):
@@ -27,17 +31,19 @@ def fetch(cfg):
         seen = set()
         for a in soup.find_all("a", href=True):
             href = urljoin(url, a["href"])
-            title = a.get_text(" ", strip=True)
-            if not JOB_HREF.search(href) or len(title) < 8 or href in seen:
+            m = JOB_HREF.search(href)
+            if not m or href in seen or "gradcracker-webinar" in href:
                 continue
             seen.add(href)
-            # Company name is the slug segment after the hub id.
-            m = re.search(r"/hubs/\d+/([^/]+)", href)
-            company = m.group(1).replace("-", " ").title() if m else "Gradcracker"
+            company_slug, title_slug = m.group(1), m.group(2)
+            title = a.get_text(" ", strip=True)
+            if len(title) < 8:
+                title = title_slug.replace("-", " ").title()
             jobs.append(Job(
                 source="gradcracker",
-                company=company,
+                company=company_slug.replace("-", " ").title(),
                 title=title,
                 url=href,
+                location="United Kingdom",
             ))
     return jobs

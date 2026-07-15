@@ -1,4 +1,10 @@
 {
+ "019a946ffbd484f2918afa00fbd961e9bab3fc5c": {
+  "company": "Tether Operations Limited",
+  "first_seen": 1784136577,
+  "title": "Research Engineer Intern (Multimodal LLM)",
+  "url": "https://www.adzuna.co.uk/jobs/details/5797654304?utm_medium=api&utm_source=9b26bddd"
+ },
  "063f6282dc6f530ee7b707f961c35a6867b3691b": {
   "company": "Palantir",
   "first_seen": 1784136741,
@@ -10,6 +16,12 @@
   "first_seen": 1784136741,
   "title": "Quantitative Research Intern",
   "url": "https://careers-sig.icims.com/jobs/11007/job?mobile=true&needsRedirect=false"
+ },
+ "0eb896c5022bc3c4b99f4aba5780e17d02bbd809": {
+  "company": "Blackrock",
+  "first_seen": 1784136745,
+  "title": "2027 Summer Internship Programme - Client & Product Functions - Sales & Relationship Management - Institutional & Wealth",
+  "url": "https://www.gradcracker.com/hub/807/blackrock/work-placement-internship/81606/2027-summer-internship-programme-client-and-product-functions-sales-and-relationship-management-institutional-and-wealth"
  },
  "1196d54fa7b116e1c6e848903733b5b5e794a4c3": {
   "company": "Everfox",
@@ -41,11 +53,29 @@
   "title": "Data Science Intern",
   "url": "https://job-boards.greenhouse.io/msfcareers/jobs/4993728008"
  },
+ "259af133fc337b723f3b9072cec04dba0a1f8244": {
+  "company": "Jump Trading",
+  "first_seen": 1784136577,
+  "title": "Campus Systems Engineer (Intern)",
+  "url": "https://www.adzuna.co.uk/jobs/details/5801193164?utm_medium=api&utm_source=9b26bddd"
+ },
+ "25eb2dd573e4075cbc2e85d22299891c573665c8": {
+  "company": "Permira",
+  "first_seen": 1784136577,
+  "title": "Intern, Investment Professional, Technology",
+  "url": "https://www.adzuna.co.uk/jobs/details/5799952158?utm_medium=api&utm_source=9b26bddd"
+ },
  "25f14cb06b33882c4ef3694fec64e802c3ed9e7e": {
   "company": "Tradeweb",
   "first_seen": 1784136741,
   "title": "Tradeweb International Intern Program - JavaScript UI Developer - Technology Division",
   "url": "https://ecnf.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/job/301721"
+ },
+ "2875051656140b3565c114f5c56edf290553057e": {
+  "company": "Blackrock",
+  "first_seen": 1784136745,
+  "title": "2027 Summer Internship Programme - Technology - Software Engineering",
+  "url": "https://www.gradcracker.com/hub/807/blackrock/work-placement-internship/81655/2027-summer-internship-programme-technology-software-engineering"
  },
  "290d5d69b5f6a480bc8679617a705765361d2f54": {
   "company": "TikTok",
@@ -95,6 +125,12 @@
   "title": "Quantitative Research Intern",
   "url": "https://job-boards.greenhouse.io/drweng/jobs/7957756"
  },
+ "353e9cde080fc5764fc8237f86233ad0b47f753f": {
+  "company": "Blackrock",
+  "first_seen": 1784136745,
+  "title": "2027 Summer Internship Programme - Technology - Sales & Relationship Management - FinTech Platform",
+  "url": "https://www.gradcracker.com/hub/807/blackrock/work-placement-internship/81654/2027-summer-internship-programme-technology-sales-and-relationship-management-fintech-platform"
+ },
  "378a2c519f21eb53497c72c0c66021c09e0531bf": {
   "company": "Citadel",
   "first_seen": 1784136741,
@@ -106,6 +142,18 @@
   "first_seen": 1784136741,
   "title": "Firmware Engineering Intern",
   "url": "https://rockwellautomation.wd1.myworkdayjobs.com/External-Rockwell-Automation-Early-Careers/job/Cambridge-Ontario-Canada/Intern--Firmware-Engineering_R26-4530"
+ },
+ "39d302d7110ec30678b53377579d686479638249": {
+  "company": "Blackrock",
+  "first_seen": 1784136745,
+  "title": "2027 Summer Internship Programme - Operations - Technology Operations",
+  "url": "https://www.gradcracker.com/hub/807/blackrock/work-placement-internship/81651/2027-summer-internship-programme-operations-technology-operations"
+ },
+ "3cc0c76e17ba3a17f39155d449d9cb981eeae94e": {
+  "company": "DRW",
+  "first_seen": 1784136577,
+  "title": "Software Developer Intern",
+  "url": "https://www.adzuna.co.uk/jobs/details/5801193050?utm_medium=api&utm_source=9b26bddd"
  },
  "3f7564629858c115a3ff3c5f43e26dbad2ac7285": {
   "company": "Palantir",
@@ -149,11 +197,23 @@
   "title": "Hardware Systems Integration Intern",
   "url": "https://careers.formlabs.com/job/7927471/apply/?gh_jid=7927471"
  },
+ "4d6220ac24d68faf15782c3043354cf65d525dee": {
+  "company": "Parker Meggitt",
+  "first_seen": 1784136745,
+  "title": "Intern - Engineering",
+  "url": "https://www.gradcracker.com/hub/558/parker-meggitt/work-placement-internship/81438/intern-engineering"
+ },
  "5937b58b623976fb80ed2bac23a4638c9955313d": {
   "company": "DRW",
   "first_seen": 1784136741,
   "title": "Software Developer Intern",
   "url": "https://job-boards.greenhouse.io/drweng/jobs/7942281"
+ },
+ "5c39e2a24e63b1b2126911778f5799a92faeda8a": {
+  "company": "Blackrock",
+  "first_seen": 1784136745,
+  "title": "2027 Placement Programme -\u00a0Technology - Software Engineering",
+  "url": "https://www.gradcracker.com/hub/807/blackrock/work-placement-internship/81599/2027-placement-programme-technology-software-engineering"
  },
  "5c5d24f1ae36fd308a8de2ecbf3e8c9895bee786": {
   "company": "Citadel Securities",
@@ -167,11 +227,29 @@
   "title": "AI Builder Intern - Global Customer Engineering - Service Sales",
   "url": "https://boards.greenhouse.io/cloudflare/jobs/8044395"
  },
+ "5f414413ab37ccf50466a3c6987605fed8829aa4": {
+  "company": "Blackrock",
+  "first_seen": 1784136745,
+  "title": "2027 Summer Internship Programme - Technology - Data Analytics & Modelling",
+  "url": "https://www.gradcracker.com/hub/807/blackrock/work-placement-internship/81652/2027-summer-internship-programme-technology-data-analytics-and-modelling"
+ },
  "61f53ae9bf8450b73bfdbe213ffc490f8b6f6d30": {
   "company": "TikTok",
   "first_seen": 1784136741,
   "title": "Data Analyst Intern - TikTok Live",
   "url": "https://lifeattiktok.com/search/7642264645810292997"
+ },
+ "64400f863065ae7ca4504476f2aea565e6ac4989": {
+  "company": "Ankura",
+  "first_seen": 1784136745,
+  "title": "Summer Internship 2026 Digital Advisory (Graduate programme conversion 2027)",
+  "url": "https://www.gradcracker.com/hub/821/ankura/work-placement-internship/81729/summer-internship-2026-digital-advisory-graduate-programme-conversion-2027"
+ },
+ "6b70761fa6c0a56dcc2f7a4c9cea3d3fbe49a5d4": {
+  "company": "Career Change",
+  "first_seen": 1784136577,
+  "title": "Cyber Security Placement Programme",
+  "url": "https://www.adzuna.co.uk/jobs/details/5801036117?utm_medium=api&utm_source=9b26bddd"
  },
  "6f381b8ce855922bebe7f68f826b76c5746af0e5": {
   "company": "Jump Trading",
@@ -209,6 +287,12 @@
   "title": "Software Engineer, Internship - Infrastructure",
   "url": "https://jobs.lever.co/palantir/b229baac-494b-4a0d-9a13-2e38806e06f3"
  },
+ "759bbc0df6562c730522533741e1e497dd3268ef": {
+  "company": "Jane Street",
+  "first_seen": 1784136745,
+  "title": "Tools & Compilers Research and Development Internship",
+  "url": "https://www.gradcracker.com/hub/820/jane-street/work-placement-internship/71257/tools-and-compilers-research-and-development-internship"
+ },
  "7a1e74776d60acd1eb0200b69f24726837123ba6": {
   "company": "Ekimetrics",
   "first_seen": 1784136741,
@@ -244,6 +328,12 @@
   "first_seen": 1784136741,
   "title": "Privacy and Civil Liberties Software Engineer, Internship",
   "url": "https://jobs.lever.co/palantir/09846827-b931-4a9f-bd64-c3bb8860187b"
+ },
+ "875d3d6803017fb4cfcd164f1e3d1bc5caf20447": {
+  "company": "Blackrock",
+  "first_seen": 1784136745,
+  "title": "2027 Summer Internship Programme - Corporate & Strategic Functions - Business & Technology Audit",
+  "url": "https://www.gradcracker.com/hub/807/blackrock/work-placement-internship/81624/2027-summer-internship-programme-corporate-and-strategic-functions-business-and-technology-audit"
  },
  "8b4982459bc374e09d81db08eddaf2e1edabcd09": {
   "company": "Citadel",
@@ -286,6 +376,12 @@
   "first_seen": 1784136741,
   "title": "Forward Deployed Software Engineer, Internship - US Government",
   "url": "https://jobs.lever.co/palantir/e0010393-c300-446f-bf67-fa2ef067f16f"
+ },
+ "983468158e81d9bed7807fa4a32090ba76b5a54b": {
+  "company": "Thales",
+  "first_seen": 1784136745,
+  "title": "System Integration & Test (SI&T) IVVQ Intern",
+  "url": "https://www.gradcracker.com/hub/162/thales/work-placement-internship/81683/system-integration-and-test-si-and-t-ivvq-intern"
  },
  "9a8741ae144cf2b4f3f5c1b728bf9ee24a2a5c1b": {
   "company": "Lila Sciences",
@@ -334,6 +430,12 @@
   "first_seen": 1784136741,
   "title": "Markets Quantitative Analyst Summer Internship 2027 New York",
   "url": "https://barclays.wd3.myworkdayjobs.com/en-US/external_career_site_barclays/job/745-7th-Avenue-New-York/Markets-Quantitative-Analyst-Summer-Internship-2027-New-York_JR-0000083408"
+ },
+ "b17b11075a94ac17d9df8b2605ac1754feda2c9d": {
+  "company": "Revolut",
+  "first_seen": 1784136577,
+  "title": "Internship Programme 2027: Information Security Engineer (Appsec)",
+  "url": "https://www.adzuna.co.uk/jobs/details/5800186386?utm_medium=api&utm_source=9b26bddd"
  },
  "b25abd48b9285124f6be6988eb88d5015143e902": {
   "company": "Hiverge",
@@ -395,6 +497,12 @@
   "title": "Data Analyst Project Intern - Data Science",
   "url": "https://lifeattiktok.com/search/7620775575152462085"
  },
+ "d35dd16e2d6597824939865944fe8a533d3162f7": {
+  "company": "Reply",
+  "first_seen": 1784136745,
+  "title": "Software Developer Summer Internship",
+  "url": "https://www.gradcracker.com/hub/691/reply/work-placement-internship/81023/software-developer-summer-internship"
+ },
  "d4ca2e332cf03b3ee2c63fe14450a61b1a3e5868": {
   "company": "Muru",
   "first_seen": 1784136741,
@@ -413,11 +521,23 @@
   "title": "Product Design Intern",
   "url": "https://jobs.ashbyhq.com/niural/d20af572-03b9-4f2a-8476-53c34203b2bc"
  },
+ "ddbae039baca2df729f66eca0147f95447d59c9b": {
+  "company": "Cambridge Consultants",
+  "first_seen": 1784136745,
+  "title": "RF Engineering Internship, Defence & Security \u2013 2026 summer placement",
+  "url": "https://www.gradcracker.com/hub/1088/cambridge-consultants/work-placement-internship/80764/rf-engineering-internship-defence-and-security-2026-summer-placement"
+ },
  "e02f422dc0e6f801224235ea20d0c1d781d9befe": {
   "company": "Apple",
   "first_seen": 1784136741,
   "title": "SoC Performance Modeling Internship - Platform Architecture",
   "url": "https://jobs.apple.com/en-us/details/200629965"
+ },
+ "e2a568f6f4a6a8b77268ae25d7b3a8332a7f0022": {
+  "company": "Blackrock",
+  "first_seen": 1784136745,
+  "title": "2027 Summer Internship Programme - Client & Product Functions - Product Strategy & Solutions",
+  "url": "https://www.gradcracker.com/hub/807/blackrock/work-placement-internship/81602/2027-summer-internship-programme-client-and-product-functions-product-strategy-and-solutions"
  },
  "e2c89a126481af34c013e3f5a135a824d4f6069d": {
   "company": "Tencent",
@@ -437,6 +557,12 @@
   "title": "Research Intern",
   "url": "https://job-boards.eu.greenhouse.io/gensyn/jobs/4579609101"
  },
+ "e7877d899a93b5d9c5c0d3634baafea0103d1ca0": {
+  "company": "Viridien",
+  "first_seen": 1784136745,
+  "title": "Software Engineering Intern",
+  "url": "https://www.gradcracker.com/hub/333/viridien/work-placement-internship/81664/software-engineering-intern"
+ },
  "e91624f4eea5d8df6dc8f9678b763addf2c6385e": {
   "company": "Dandy",
   "first_seen": 1784136741,
@@ -448,6 +574,12 @@
   "first_seen": 1784136741,
   "title": "Research Internship",
   "url": "https://jobs.ashbyhq.com/cohere/73bd3e2b-6597-4124-b64b-1e5dbc32e785/application"
+ },
+ "eaf9f17435204d01ca7a6b23fa6ebbd7f3d76fb1": {
+  "company": "InstaDeep",
+  "first_seen": 1784136577,
+  "title": "IT Support Engineer Intern",
+  "url": "https://www.adzuna.co.uk/jobs/details/5797940645?utm_medium=api&utm_source=9b26bddd"
  },
  "ef69b9321f756d5acde52f09439a9050eed0f885": {
   "company": "Blackstone",
@@ -472,6 +604,12 @@
   "first_seen": 1784136741,
   "title": "Software Engineer Intern",
   "url": "https://jobs.lever.co/quantco-/d69096fa-b673-4953-ba63-7deee08bc13c/apply"
+ },
+ "f35cc85fee6b14ab297b79b4a762e7676ad84a94": {
+  "company": "Blackrock",
+  "first_seen": 1784136745,
+  "title": "2027 Summer Internship Programme - Technology - Technology Operations",
+  "url": "https://www.gradcracker.com/hub/807/blackrock/work-placement-internship/81656/2027-summer-internship-programme-technology-technology-operations"
  },
  "f5a1ae75fb73d6192e945c3414a84dfbe1a0f5f7": {
   "company": "Formlabs",
@@ -520,6 +658,12 @@
   "first_seen": 1784136741,
   "title": "Data Extraction Co-op",
   "url": "https://job-boards.greenhouse.io/lilasciences/jobs/4280811009"
+ },
+ "fb6579d6556d76dbd3c061139710dda329b784c5": {
+  "company": "Blackrock",
+  "first_seen": 1784136745,
+  "title": "2027 Summer Internship Programme - Client & Product Functions - Sales & Relationship Management - FinTech Platform",
+  "url": "https://www.gradcracker.com/hub/807/blackrock/work-placement-internship/81604/2027-summer-internship-programme-client-and-product-functions-sales-and-relationship-management-fintech-platform"
  },
  "ff2ed055f062aac446322b3b87b1739e53b787b5": {
   "company": "Formlabs",
