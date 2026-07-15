@@ -2,7 +2,9 @@ name: Job Scout
 
 on:
   schedule:
-    - cron: "*/15 * * * *"   # every 15 min (GitHub may delay a few minutes)
+    # Every 15 min on off-peak minutes — :00/:15/:30/:45 are GitHub's most
+    # congested cron slots and scheduled runs there get delayed or skipped.
+    - cron: "4,19,34,49 * * * *"
   workflow_dispatch:
     inputs:
       validate:
