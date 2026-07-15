@@ -1,0 +1,241 @@
+# job-scout configuration
+# Keywords are matched case-insensitively on word boundaries.
+
+state_path: data/seen.json
+
+filters:
+  # The job title must contain at least one of these (internship / 12-month placement).
+  role_keywords:
+    - intern
+    - interns
+    - internship
+    - internships
+    - placement
+    - placements
+    - "industrial placement"
+    - "year in industry"
+    - "year-in-industry"
+    - "sandwich year"
+    - "sandwich placement"
+    - "12 month"
+    - "12-month"
+    - "twelve month"
+    - co-op
+    - "undergraduate scheme"
+
+  # Reject if the title contains any of these.
+  exclude_keywords:
+    - senior
+    - staff
+    - principal
+    - director
+    - "head of"
+    - manager
+    - phd
+    - postdoc
+    - "outplacement"
+
+  # Title or department must contain at least one of these (set require_tech: false to disable).
+  require_tech: true
+  tech_keywords:
+    - software
+    - engineer
+    - engineering
+    - developer
+    - development
+    - security
+    - cyber
+    - cybersecurity
+    - data
+    - devops
+    - sre
+    - cloud
+    - infrastructure
+    - platform
+    - network
+    - networking
+    - "machine learning"
+    - ai
+    - ml
+    - research
+    - technology
+    - tech
+    - computer
+    - computing
+    - "full stack"
+    - frontend
+    - "front end"
+    - backend
+    - "back end"
+    - mobile
+    - qa
+    - test
+    - analyst
+    - product
+    - solutions
+    - systems
+    - electronics
+    - embedded
+    - firmware
+    - robotics
+    - hardware
+    - digital
+    - informatics
+
+  # Any of these marks the job as PRIORITY (security) in the Discord alert.
+  security_keywords:
+    - security
+    - cyber
+    - cybersecurity
+    - infosec
+    - "information security"
+    - soc
+    - siem
+    - penetration
+    - pentest
+    - "pen test"
+    - "red team"
+    - "blue team"
+    - "purple team"
+    - threat
+    - vulnerability
+    - appsec
+    - "application security"
+    - "product security"
+    - "cloud security"
+    - "network security"
+    - grc
+    - cryptography
+    - forensics
+    - malware
+    - detection
+    - "incident response"
+    - "offensive security"
+
+  # Location (or title) must contain one of these. Jobs with no location listed
+  # are allowed through when allow_unknown_location is true.
+  allow_unknown_location: true
+  uk_location_terms:
+    - united kingdom
+    - uk
+    - gb
+    - england
+    - scotland
+    - wales
+    - northern ireland
+    - london
+    - manchester
+    - cambridge
+    - oxford
+    - edinburgh
+    - glasgow
+    - belfast
+    - bristol
+    - leeds
+    - birmingham
+    - reading
+    - "milton keynes"
+    - cheltenham
+    - newcastle
+    - sheffield
+    - nottingham
+    - cardiff
+    - guildford
+    - southampton
+    - brighton
+    - york
+    - bath
+    - coventry
+    - leicester
+    - liverpool
+    - basingstoke
+    - slough
+    - "hemel hempstead"
+    - farnborough
+    - malvern
+    - "remote - uk"
+    - "uk remote"
+    - "remote (uk)"
+
+sources:
+  # ---- Direct ATS APIs (most reliable; jobs appear here before LinkedIn) ----
+  # Add/remove company slugs freely, then run `python -m scraper.validate`
+  # (or the Actions "validate" dispatch) to confirm each slug works.
+
+  greenhouse:
+    enabled: true
+    companies:
+      - cloudflare
+      - monzo
+      - deliveroo
+      - skyscanner
+      - databricks
+      - wayve
+      - checkout
+      - starlingbank
+      - octopusenergy
+      - darktrace
+      - snyk
+      - trailofbits
+
+  lever:
+    enabled: true
+    companies:
+      - palantir
+
+  ashby:
+    enabled: true
+    companies:
+      - elevenlabs
+      - wise
+      - quantexa
+
+  workable:
+    enabled: true
+    companies:
+      - huggingface
+
+  workday:
+    enabled: true
+    boards:
+      # host / tenant / site as they appear in the careers URL:
+      # https://<tenant>.wdN.myworkdayjobs.com/<site>
+      - host: arm.wd3.myworkdayjobs.com
+        tenant: arm
+        site: External
+        search: ""
+      - host: rollsroyce.wd3.myworkdayjobs.com
+        tenant: rollsroyce
+        site: professional
+        search: "placement"
+
+  # ---- GitHub internship tracker repos ----
+  simplify:
+    enabled: true
+    listing_urls:
+      - https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/dev/.github/scripts/listings.json
+
+  # ---- UK job aggregator API (free key from https://developer.adzuna.com) ----
+  # Covers Reed, Totaljobs, CV-Library and many portals in one API.
+  # Enabled automatically when ADZUNA_APP_ID / ADZUNA_APP_KEY env vars are set.
+  adzuna:
+    enabled: true
+    max_days_old: 3
+    queries:
+      - "cyber security placement"
+      - "security intern"
+      - "software placement year"
+      - "industrial placement software"
+      - "technology internship"
+      - "12 month placement IT"
+
+  # ---- UK placement boards (best-effort HTML scraping; may be bot-blocked) ----
+  gradcracker:
+    enabled: true
+    search_urls:
+      - https://www.gradcracker.com/search/computing-technology/engineering-work-placements-internships
+
+  ratemyplacement:
+    enabled: true
+    search_urls:
+      - "https://www.ratemyplacement.co.uk/search-jobs?show=jobs&industry=it-technology"
