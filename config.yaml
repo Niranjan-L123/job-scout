@@ -171,23 +171,40 @@ sources:
       - databricks
       - wayve
       - graphcore
+      - netcraft
+      - stripe
+      - datadog
+      - mongodb
+      - twilio
+      - elastic
+      - ocadogroup
 
   lever:
     enabled: true
     companies:
       - palantir
       - sophos
+      - octoenergy
 
   ashby:
     enabled: true
     companies:
       - elevenlabs
       - quantexa
+      - immersivelabs
+      - thought-machine
+      - improbable
+      - deliveroo
+      - trainline
+      - synthesia
 
   workable:
     enabled: true
     companies:
       - huggingface
+      - senseon
+      - portswigger
+      - bridewell
 
   workday:
     enabled: true
@@ -198,12 +215,30 @@ sources:
         tenant: rollsroyce
         site: professional
         search: "placement"
+      - host: nccgroup.wd3.myworkdayjobs.com
+        tenant: nccgroup
+        site: NCC_Group
+        search: ""
+      - host: kainos.wd3.myworkdayjobs.com
+        tenant: kainos
+        site: Kainos
+        search: ""
+      - host: astrazeneca.wd3.myworkdayjobs.com
+        tenant: astrazeneca
+        site: Careers
+        search: "placement"
 
   # ---- GitHub internship tracker repos ----
   simplify:
     enabled: true
     listing_urls:
       - https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/dev/.github/scripts/listings.json
+
+  # International (incl. UK) SWE internships tracked by speedyapply.
+  speedyapply:
+    enabled: true
+    listing_urls:
+      - https://raw.githubusercontent.com/speedyapply/2026-SWE-College-Jobs/main/INTERN_INTL.md
 
   # ---- UK job aggregator API (free key from https://developer.adzuna.com) ----
   # Covers Reed, Totaljobs, CV-Library and many portals in one API.
@@ -218,12 +253,16 @@ sources:
       - "industrial placement software"
       - "technology internship"
       - "12 month placement IT"
+      # Broad sweep: any IT-category job whose ad mentions intern/placement.
+      - what_or: "intern internship placement undergraduate"
+        category: it-jobs
 
   # ---- UK placement boards (best-effort HTML scraping; may be bot-blocked) ----
   gradcracker:
     enabled: true
     search_urls:
       - https://www.gradcracker.com/search/computing-technology/engineering-work-placements-internships
+      - "https://www.gradcracker.com/search/computing-technology/engineering-work-placements-internships?page=2"
 
   # Disabled: ratemyplacement.co.uk renders job listings client-side with
   # JavaScript, so plain HTML scraping returns nothing. Gradcracker + Adzuna

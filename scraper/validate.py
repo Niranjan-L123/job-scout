@@ -40,7 +40,7 @@ def main():
         if not _check(board["tenant"], lambda b=board: module.fetch({"boards": [b]})):
             failures += 1
 
-    for name in ("simplify", "adzuna", "gradcracker", "ratemyplacement"):
+    for name in ("simplify", "speedyapply", "adzuna", "gradcracker", "ratemyplacement"):
         source_cfg = cfg["sources"].get(name) or {}
         print(f"{name}:")
         if not _check(name, lambda n=name, c=source_cfg: SOURCES[n].fetch(c)):

@@ -6,6 +6,7 @@ from . import (
     lever,
     ratemyplacement,
     simplify,
+    speedyapply,
     workable,
     workday,
 )
@@ -17,6 +18,7 @@ SOURCES = {
     "workable": workable,
     "workday": workday,
     "simplify": simplify,
+    "speedyapply": speedyapply,
     "adzuna": adzuna,
     "gradcracker": gradcracker,
     "ratemyplacement": ratemyplacement,
