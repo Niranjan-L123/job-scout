@@ -35,6 +35,60 @@ filters:
     - postdoc
     - "outplacement"
 
+  # Reject self-funded IT training-course adverts masquerading as jobs (matched
+  # against title + company + department). These are course sellers, not
+  # employers — the user has zero interest in them.
+  spam_keywords:
+    # Paid-training / scam tells
+    - "self-funded"
+    - "self funded"
+    - "self-employed"
+    - "training programme"
+    - "training program"
+    - "training course"
+    - "traineeship"
+    - "trainee programme"
+    - "trainee program"
+    - "study programme"
+    - "no experience required"
+    - "no experience needed"
+    - "no experience necessary"
+    - "guaranteed interview"
+    - "guaranteed job"
+    - "guaranteed placement"
+    - "job guarantee"
+    - "money back"
+    - "money-back"
+    - "course fee"
+    - "tuition"
+    - "enrol"
+    - "enroll"
+    - "enrolment"
+    - "bootcamp"
+    - "boot camp"
+    - "career change"
+    - "change your career"
+    - "kickstart your career"
+    - "re-train"
+    - "retrain"
+    - "get into tech"
+    - "get into it"
+    - "fast track into"
+    # Known course-seller companies (aggregated in via Adzuna/Reed/CV-Library)
+    - "itonlinelearning"
+    - "it online learning"
+    - "nuyew"
+    - "e-careers"
+    - "ecareers"
+    - "just it"
+    - "learning people"
+    - "career academy"
+    - "tech academy"
+    - "training academy"
+    - "skills group"
+    - "knowledgehut"
+    - "baltic apprenticeships"
+
   # Title or department must contain at least one of these (set require_tech: false to disable).
   require_tech: true
   tech_keywords:
@@ -153,6 +207,65 @@ filters:
     - "hemel hempstead"
     - farnborough
     - malvern
+    # --- additional UK tech/placement hubs (were being dropped) ---
+    - derby
+    - derbyshire
+    - abingdon
+    - warwick
+    - swindon
+    - gloucester
+    - gloucestershire
+    - stevenage
+    - hatfield
+    - welwyn
+    - harlow
+    - warrington
+    - preston
+    - bolton
+    - bracknell
+    - crawley
+    - gatwick
+    - luton
+    - watford
+    - ipswich
+    - norwich
+    - portsmouth
+    - fareham
+    - plymouth
+    - exeter
+    - aberdeen
+    - dundee
+    - "stoke-on-trent"
+    - telford
+    - chester
+    - sunderland
+    - middlesbrough
+    - hull
+    - wolverhampton
+    - solihull
+    - filton
+    - corsham
+    - chippenham
+    - maidenhead
+    - wokingham
+    - camberley
+    - aldershot
+    - staines
+    - uxbridge
+    - hounslow
+    - swansea
+    - newport
+    - "high wycombe"
+    - stevenage
+    - peterborough
+    - lincoln
+    - oxfordshire
+    - berkshire
+    - hampshire
+    - surrey
+    - hertfordshire
+    - "west midlands"
+    - "greater london"
     - "remote - uk"
     - "uk remote"
     - "remote (uk)"

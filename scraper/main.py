@@ -1,5 +1,6 @@
 import argparse
 import sys
+import time
 
 from . import log
 from .config import load_config
@@ -8,12 +9,22 @@ from .notify import send_matches, send_text
 from .sources import SOURCES
 from .state import State
 
+# Stop starting new sources past this many seconds so the run always leaves time
+# to dedupe, alert and commit within the workflow's 15-minute cap. A source that
+# hasn't started yet is simply skipped this cycle and picked up next run.
+COLLECT_BUDGET_SECONDS = 600
+
 
 def collect_jobs(cfg):
     all_jobs = []
+    deadline = time.monotonic() + COLLECT_BUDGET_SECONDS
     for name, source_cfg in cfg.get("sources", {}).items():
         if not (source_cfg or {}).get("enabled", True):
             continue
+        if time.monotonic() > deadline:
+            log.warning("time budget (%ss) reached; skipping remaining sources "
+                        "starting at %r", COLLECT_BUDGET_SECONDS, name)
+            break
         module = SOURCES.get(name)
         if module is None:
             log.warning("unknown source %r in config, skipping", name)

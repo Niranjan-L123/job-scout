@@ -5,6 +5,10 @@ USER_AGENT = (
     "(KHTML, like Gecko) Chrome/126.0 Safari/537.36"
 )
 
+# Per-request cap. Kept tight so a single degraded host can't stall the whole
+# run toward the workflow's 15-minute timeout.
+DEFAULT_TIMEOUT = 15
+
 SESSION = requests.Session()
 SESSION.headers.update({
     "User-Agent": USER_AGENT,
@@ -13,18 +17,21 @@ SESSION.headers.update({
 
 
 def get_json(url, **kwargs):
-    r = SESSION.get(url, timeout=30, **kwargs)
+    kwargs.setdefault("timeout", DEFAULT_TIMEOUT)
+    r = SESSION.get(url, **kwargs)
     r.raise_for_status()
     return r.json()
 
 
 def post_json(url, payload, **kwargs):
-    r = SESSION.post(url, json=payload, timeout=30, **kwargs)
+    kwargs.setdefault("timeout", DEFAULT_TIMEOUT)
+    r = SESSION.post(url, json=payload, **kwargs)
     r.raise_for_status()
     return r.json()
 
 
 def get_html(url, **kwargs):
-    r = SESSION.get(url, timeout=30, **kwargs)
+    kwargs.setdefault("timeout", DEFAULT_TIMEOUT)
+    r = SESSION.get(url, **kwargs)
     r.raise_for_status()
     return r.text

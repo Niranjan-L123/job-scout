@@ -14,6 +14,7 @@ class Classifier:
         f = cfg["filters"]
         self.role = _pattern(f["role_keywords"])
         self.exclude = _pattern(f.get("exclude_keywords"))
+        self.spam = _pattern(f.get("spam_keywords"))
         self.tech = _pattern(f.get("tech_keywords"))
         self.security = _pattern(f.get("security_keywords"))
         self.uk = _pattern(f.get("uk_location_terms"))
@@ -29,6 +30,11 @@ class Classifier:
         if not self.role.search(title):
             return None
         if self.exclude and self.exclude.search(title):
+            return None
+        # Reject self-funded training-course "jobs" — the tell is often in the
+        # company name (course sellers) or department, not just the title.
+        if self.spam and self.spam.search(
+                f"{job.title} {job.company} {job.department}".lower()):
             return None
         is_tech = bool(self.tech and self.tech.search(title_dept))
         is_security = bool(self.security and self.security.search(title_dept))
