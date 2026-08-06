@@ -3,3 +3,7 @@ __pycache__/
 .venv/
 venv/
 .env
+
+# resume-tailoring working files
+data/tailor/
+data/shortlist.txt
