@@ -5,6 +5,7 @@ from . import (
     greenhouse,
     lever,
     ratemyplacement,
+    reed,
     simplify,
     speedyapply,
     workable,
@@ -20,6 +21,7 @@ SOURCES = {
     "simplify": simplify,
     "speedyapply": speedyapply,
     "adzuna": adzuna,
+    "reed": reed,
     "gradcracker": gradcracker,
     "ratemyplacement": ratemyplacement,
 }

@@ -166,6 +166,95 @@ filters:
     - "incident response"
     - "offensive security"
 
+  # US/international trackers: require a positive UK location match (don't let
+  # blank-location postings through). These repos are US-dominated.
+  strict_location_sources:
+    - simplify
+    - speedyapply
+
+  # Hard non-UK signals — reject unless an unambiguous UK marker (UK/England/...)
+  # is also present (so "London, UK, SF, NYC" still passes). US state codes like
+  # ", MA"/", NY" are handled separately in code. Collision cities (Cambridge,
+  # York, Lincoln, Plymouth, Surrey) are disambiguated by those state codes, so
+  # they are NOT listed here.
+  exclude_location_terms:
+    - "united states"
+    - usa
+    - "u.s.a"
+    - america
+    - canada
+    - india
+    - singapore
+    - australia
+    - israel
+    - japan
+    - china
+    - "hong kong"
+    - france
+    - germany
+    - netherlands
+    - spain
+    - italy
+    - poland
+    - romania
+    - sweden
+    - switzerland
+    - ireland
+    - dublin
+    - "new york"
+    - "long island"
+    - "san francisco"
+    - "los angeles"
+    - seattle
+    - austin
+    - chicago
+    - "san jose"
+    - "palo alto"
+    - "menlo park"
+    - "mountain view"
+    - sunnyvale
+    - atlanta
+    - dallas
+    - denver
+    - houston
+    - "san diego"
+    - mclean
+    - plano
+    - raleigh
+    - pittsburgh
+    - bellevue
+    - redmond
+    - cupertino
+    - "santa clara"
+    - nyc
+    - bengaluru
+    - bangalore
+    - hyderabad
+    - mumbai
+    - pune
+    - chennai
+    - gurgaon
+    - noida
+    - toronto
+    - montreal
+    - vancouver
+    - paris
+    - berlin
+    - munich
+    - hamburg
+    - amsterdam
+    - madrid
+    - barcelona
+    - zurich
+    - stockholm
+    - warsaw
+    - "tel aviv"
+    - sydney
+    - melbourne
+    - tokyo
+    - beijing
+    - shanghai
+
   # Location (or title) must contain one of these. Jobs with no location listed
   # are allowed through when allow_unknown_location is true.
   allow_unknown_location: true
@@ -362,6 +451,13 @@ sources:
     queries:
       - "cyber security placement"
       - "security intern"
+      # Targeted cyber recall (titles still must contain a role keyword to pass)
+      - "SOC analyst placement"
+      - "penetration testing placement"
+      - "security analyst placement"
+      - "information security internship"
+      - "cyber security industrial placement"
+      - "cyber security year in industry"
       - "software placement year"
       - "industrial placement software"
       - "technology internship"
@@ -370,12 +466,38 @@ sources:
       - what_or: "intern internship placement undergraduate"
         category: it-jobs
 
+  # ---- Reed.co.uk API (major UK board; free key: reed.co.uk/developers) ----
+  # Dormant until REED_API_KEY is set as an env var / GitHub Actions secret.
+  reed:
+    enabled: true
+    max_days_old: 7
+    results_per_query: 100
+    location: "United Kingdom"
+    queries:
+      - "cyber security placement"
+      - "cyber security internship"
+      - "security analyst placement"
+      - "SOC analyst placement"
+      - "penetration testing placement"
+      - "information security internship"
+      - "software engineering placement"
+      - "software developer internship"
+      - "data science placement"
+      - "IT industrial placement"
+
   # ---- UK placement boards (best-effort HTML scraping; may be bot-blocked) ----
   gradcracker:
     enabled: true
+    # Discipline-specific placement feeds — cyber-security first (the user's
+    # priority), then the rest of computing/tech.
     search_urls:
+      - https://www.gradcracker.com/search/computing-technology/cyber-security-work-placements-internships
+      - https://www.gradcracker.com/search/computing-technology/computer-science-work-placements-internships
+      - https://www.gradcracker.com/search/computing-technology/information-technology-work-placements-internships
+      - https://www.gradcracker.com/search/computing-technology/software-systems-work-placements-internships
+      - https://www.gradcracker.com/search/computing-technology/data-science-work-placements-internships
+      - https://www.gradcracker.com/search/computing-technology/ai-machine-learning-work-placements-internships
       - https://www.gradcracker.com/search/computing-technology/engineering-work-placements-internships
-      - "https://www.gradcracker.com/search/computing-technology/engineering-work-placements-internships?page=2"
 
   # Disabled: ratemyplacement.co.uk renders job listings client-side with
   # JavaScript, so plain HTML scraping returns nothing. Gradcracker + Adzuna
